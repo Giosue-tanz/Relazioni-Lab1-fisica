@@ -1,0 +1,47 @@
+\documentclass{article}
+\input{preambolo.sty}
+\title{Relazione densità}
+\author{Giosuè Aiello}
+\date{\today}
+\begin{document}
+	\maketitle
+	\section{Scopo}
+	Scrivere scopo una volta all'esame
+	\section{Premesse teoriche}
+	La densità ($\rho$) viene definito come il rapporto fra la massa e il volume:
+	\begin{equation}
+		\rho = \frac{m}{V}
+	\end{equation}
+	dove $m$ rappresenta la massa del corpo e $V$ il volume dell'oggetto e della sostanza considerata. La densità è una proprietà intrinseca che caratterizza ogni materiale e può essere utilizzata per identificare o distinguere fra diversi materiali. \\
+	Nel caso di sfere di differente raggio $r$ e con la medesima densità $\rho$ possiamo affermare che
+	\begin{equation}
+	m = \frac{4}{3} \pi \rho r^3 = kr^3
+	\end{equation}
+	e rappresentandolo in scala bilogaritmica, questa relazione appare come una retta con il coefficiente angolare della retta corrispondente al valore atteso 3.
+\section{Strumenti e materiali}
+	\textbf{Strumenti}:	
+	\begin{itemize}
+		\item Calibro ventesimale (risoluzione $0.05 \, \si{\milli\meter}$)
+		\item Calibro Palmer (risoluzione $0.01 \si{\milli\meter}$)
+		\item Bilancia di precisione (risoluzione $1 \si{\milli\gram}$)
+	\end{itemize}
+	\textbf{Materiali}:
+	\begin{itemize}
+		\item una serie di solidi
+	\end{itemize}
+\section{Descrizione delle misure}
+Per effettuare questa esperienza abbiamo prima verificato la corretta taratura della bilancia che abbiamo utilizzato per svolgere l'esperienza. \\
+Successivamente, abbiamo preso i vari solidi e abbiamo misurato la loro massa e tutti i parametri necessari per determinare il loro volume: (scrivere qua i parametri per tipologia di solido)
+\section{Analisi delle misure}
+In questa esperienza, gli errori sulle ascisse (ovvero gli errori sul volume) non sono trascurabili rispetto agli errori sulle ordinate (ovvero sulle masse), ovvero
+$$
+	\sigma_{m_i} << \frac{df}{dV_i} \sigma_{V_i}
+$$
+dove nel nostro caso $f(V_i) = \rho V_i$ e la $i$ indica l'$i$-esimo solido considerato. \\
+Dunque, per semplificare la trattazione, ho deciso di effettuare il grafico massa-volume, dunque gli errori sulle ascisse (che adesso rappresenta la massa) sono adesso trascurabili e abbiamo deciso di effettuare il fit con il seguente modello teorico:
+$$
+	V_i = \frac{m_i}{\rho}
+$$
+dunque i dati si dovrebbero ancora disporre su una retta con coefficiente angolare pari a $\frac{1}{\rho}$
+Per quanto riguarda l'incertezza assegnata al volume $V_i$, ho propagato l'errore nella seguente maniera: (scrivere in base ai solidi)
+\end{document}

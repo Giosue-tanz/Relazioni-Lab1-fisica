@@ -1,0 +1,18 @@
+\						M: (g)		h:	b:	L: (mm)
+
+cilindro lungo d'ottone: 			24.601 		37.30   9.96                  #misura effetuata con calibro mentre le restanti misure con c.palmer
+cilinfro base grossa alluminio:			15.858 		20.01	19.83
+cilindro piccolo alluminio: 			5.827		19.29	11.96	
+parallelepipedo con scanalatura irregolare alluminio: 4.822 		17.83	10.05	10.06
+parallelepipedo a base larga alluminio: 		7.709 		8.14	17.64	20.08	
+cilindro d'ottone corto: 			10.499		15,99 	9.46
+cilindro a base esagonale ottone: 		16.425  	22,75 	9.96
+
+palline d'acciaio in ordine grandezza :					d: (mm)
+
+micro: 						3.524 		9,052
+mini:						8.361 		12,70
+normale:					11.891 		14,29
+grande: 					24.839 		18,26
+max: 						44.707		22,22 
+

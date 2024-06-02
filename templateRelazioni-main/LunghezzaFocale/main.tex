@@ -1,0 +1,54 @@
+\documentclass{article}
+\input{preambolo.sty}
+\title{Lunghezza Focale}
+\author{Francesco Sermi}
+\date{\today}
+
+\begin{document}
+	\maketitle
+	\section{Scopo}
+	Misurare la lunghezza focale di una lente
+	\section{Premesse teoriche}
+	Una lente è un dispositivo ottico in grado di far concentrare o disperdere i raggi luminosi. \\
+	\noindent Una lente divergente è un tipo di lente che, per l'appunto, fa divergere i raggi luminosi che la attraversano, facendo in modo che questi provengano da un punto dietro la lente stessa: siccome forma esclusivamente \emph{immagini virtuali} necessitiamo di una lente convergente con un potere diottrico maggiore in modulo rispetto a quello delle lente divergente. \\
+	Per calcolare la lunghezza focale della lente divergente si utilizza la legge dei punti coniugati (nel caso di lenti sottili), che risulta essere
+	\begin{equation}
+		\frac{1}{p} + \frac{1}{q} = \frac{1}{f}
+		\label{lens_maker}	
+	\end{equation}
+	dove $p$ e $q$ rappresentano, rispettivamente, la distanza fra la lente e lo schermo (quando essa non è a fuoco) e la distanza fra la lente e lo schermo con l'immagine a fuoco. \\
+	Un fatto interessante è che la~(\ref{lens_maker}) mostra come per determinare la lunghezza focale $f$ sia necessario conoscere sia $p$ che $q$, ma se
+	\begin{equation}
+		\frac{1}{\hat{p}} \ll \frac{\sigma_q}{q^2} \, \implies \hat{p} \gg \frac{\hat{q}^2}{\sigma_q^2}
+	\end{equation}
+	allora si potrebbe trascurare il termine $\frac{1}{p}$ e misurare solamente $\frac{1}{q}$ (effettuando quindi una sola misura).
+	\section{Strumenti e materiali}
+	\textbf{Strumenti}	
+	\begin{itemize}
+		\item metro a nastro, con risoluzione $\pm 0.1 \si{\centi\meter}$
+	\end{itemize}
+	\textbf{Materiali}
+	\begin{itemize}
+		\item banco ottico con sorgente luminosa
+		\item lente di lunghezza focale ignota
+		\item schermo
+		\item cassetta di lenti convergenti o divergenti
+	\end{itemize}
+	\section{Descrizione delle misure}
+	Per semplificare la presa dei dati, la sorgente era coperta da un pezzo di plastica da cui era stato rimosso un triangolino: in questa maniera era più facile individuare se l'immagine era messa a fuoco siccome i bordi del triangolo si delineavano ancora più. \\
+	Inizialmente ho verificato che la lente dal potere diottrico ignoto fosse divergente: questo è stato possibile prendendo la lente e ponendola davanti alla sorgente, osservando che non esisteva alcun punto in cui i raggi convergessero. (da completare la seconda parte) \\
+	Come spiegato nelle premesse teoriche, per misurare la lunghezza focale necessitiamo di una lente convergente: per questo ho considerato una lente con potere diottrico di $+xx$ e abbiamo spostato lo schermo per mettere a fuoco l'immagine sullo schermo. A quel punto abbiamo posto la lente divergente fra lo schermo e la lente convergente e abbiamo misurato la distanza arbitraria $p$ fra lo schermo e la lente. Successivamente abbiamo spostato lo schermo in modo da rimettere a fuoco l'immagine e abbiamo misurato la distanza $q$ fra lo schermo e la lente. Iterando questo procedimento, abbiamo effettuato in totale $x$ misurazioni. \\
+	Come incertezza non abbiamo utilizzato la risoluzione dello strumento siccome non conoscevamo bene la posizione del centro della lente e non si riusciva a trovare il punto esatto di messa a fuoco, ma solamente un intervallo in cui l'immagine sullo schermo risultava essere a fuoco; dunque abbiamo deciso di utilizzare un'incertezza di misura pari a $0.5 \, \si{\centi\meter}$
+	\section{Analisi dei dati}
+	I dati non soddisfano la condizione $\frac{1}{\hat{p}} \ll \frac{\sigma_q}{q^2}$ dunque non possiamo trascurare il termine $\frac{1}{p}$. Linearizziamo la ~(\ref{lens_maker}) ponendo $x = \frac{1}{q}$ e $y=\frac{1}{p}$ e si ottiene
+	$$
+		y = mx + \frac{1}{f}
+	$$
+	e possiamo dunque effettuare un fit utilizzando come modello teorico una semplice retta che ha $m$ come coefficiente angolare e $\frac{1}{f}$ come intercetta con l'asse y. Tuttavia si osserva che gli errori sugli $x_i$ non sono trascurabili e quindi abbiamo utilizzato gli errori efficaci. \\
+	Riporto il grafico del fit \\
+	
+	Per valutare l'accordo fra il modello e i dati abbiamo calcolato il $\chi^2$ utilizzando sempre gli errori efficaci:
+	\begin{equation}
+		\chi^2 = \sum_{i=1}^n \frac{(y_i - f(x_i; \hat{\theta}_1, \ldots, \hat{\theta}_n))^2}{\sigma_{y_i}^2 + (\frac{df}{dx}(x_i; \hat{\theta}_1, \ldots, \hat{\theta}_n))^2 \sigma_{x_i}^2}
+	\end{equation}
+\end{document}

@@ -1,0 +1,8 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {section}{\numberline {1}Scopo dell'esperienza}{2}{section.1}%
+\contentsline {section}{\numberline {2}Cenni teorici}{2}{section.2}%
+\contentsline {section}{\numberline {3}Apparato Sperimentale e Strumenti}{3}{section.3}%
+\contentsline {section}{\numberline {4}Descrizione delle misure}{3}{section.4}%
+\contentsline {section}{\numberline {5}Analisi dei dati}{4}{section.5}%
+\contentsline {section}{\numberline {6}Conclusioni}{5}{section.6}%
